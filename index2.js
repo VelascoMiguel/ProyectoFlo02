@@ -139,7 +139,7 @@ setInterval(async () => {
   }
 }, 10000);
 
-server.listen(4544, () => {
-  console.log("Servidor backend escuchando en el puerto 4544");
+server.listen(8080, () => {
+  console.log("Servidor backend escuchando en el puerto 8080");
 });
 
