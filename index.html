@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Otras etiquetas meta, enlaces a estilos, etc. -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c42050f897.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="exchange" id="exchange">
+      <div class="content-exchange">
+        <div class="fr-exchange">
+          <i class="fa-solid fa-xmark" id="fa-xmark" style="color: #ffffff"></i>
+        </div>
+        <div class="sr-exchange">
+          <div class="title-exchange">
+            <h2>Exchange</h2>
+          </div>
+          <form id="form-exchange" action="">
+            <div class="row-input-exchange">
+              <div class="crypto-row">
+                <p>From</p>
+                <div class="choose-cripto">
+                  <select id="fromCrypto">
+                    <option value="btc">BTC</option>
+                    <option value="eth">ETH</option>
+                    <option value="xrp">XRP</option>
+                    <option value="ada">ADA</option>
+                    <option value="xmr">XMR</option>
+                  </select>
+                  <img id="fromCryptoLogo" src="./images/bitcoin.png" alt="" />
+                </div>
+              </div>
+              <input type="text" placeholder="Amount... " name="" id="cant-cripto-from" />
+            </div>
+            <div class="row-input-exchange">
+              <div class="crypto-row">
+                <p>To</p>
+                <div class="choose-cripto">
+                  <select id="toCrypto">
+                    <option value="eth">ETH</option>
+                    <option value="btc">BTC</option>
+                    <option value="xrp">XRP</option>
+                    <option value="ada">ADA</option>
+                    <option value="xmr">XMR</option>
+                  </select>
+                  <img id="toCryptoLogo" src="./images/coins.png" alt="" />
+                </div>
+              </div>
+              <input type="text" placeholder=" " name="" id="" />
+            </div>
+            <div class="row-input-exchange">
+              <p>Amount</p>
+              <input type="text" placeholder="..." name="" id="result-exchange" />
+            </div>
+            <div class="row-button row-input-exchange">
+              <button id="calculate-exchange">Calculate</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <header>
+      <nav>
+        <div class="first-part">
+          <i class="fa-solid fa-bitcoin-sign" style="color: #0400ff"></i>
+          <a href="">Dashboard</a>
+          <p id="activate-exchange">Exchange</p>
+        </div>
+        <div class="where-to-buy">
+          <i class="fa-regular fa-circle-question" style="color: #ffffff"></i>
+          <a href="" id="activate-list-buy">Where to buy ?</a>
+          <div class="places-to-buy" id="places-to-buy">
+            <div class="market">
+              <a href="https://www.lemon.me/en" target="_blank">Lemon Cash</a>
+              <img src="./images/lemon.png" alt="" />
+            </div>
+            <div class="market">
+              <a href="https://www.binance.com/es" target="_blank">Binance</a>
+              <img src="./images/coins(1).png" alt="" />
+            </div>
+            <div class="market">
+              <a href="https://www.coinbase.com/" target="_blank">Coinbase</a>
+              <img src="./images/coinbase.png" alt="" />
+            </div>
+            <div class="market">
+              <a href="https://bitso.com/" target="_blank">Bitso</a>
+              <img src="./images/bitso.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="general-container">
+        <div class="row fr-general-container">
+          <!-- Card1 -->
+          <div class="card-fr card-bitcoin">
+            <div class="content-card">
+              <div class="title-card">
+                <h3>Bitcoin</h3>
+                <p>USD</p>
+              </div>
+              <div class="price-card">
+                <div class="img-card">
+                  <h2>1 BTC</h2>
+                  <img src="./images/bitcoin.png" alt="" />
+                </div>
+                <div class="detail-price">
+                  <h1 id="bitcoin">$26.000</h1>
+                </div>
+              </div>
+              <div class="details-card">
+                <div class="profit-card">
+                  <p>Profit last hour</p>
+                  <p>$1250,78</p>
+                </div>
+                <div class="porcentage-detail" id="porcentage-detail-btc">
+                  <i class="fa-solid fa-arrow-up" style="color: #0400ff"></i>
+                  <p>21.0%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card2 -->
+          <div class="card-fr card-eth">
+            <div class="content-card">
+              <div class="title-card">
+                <h3>Ethereum</h3>
+                <p>USD</p>
+              </div>
+              <div class="price-card">
+                <div class="img-card">
+                  <h2>1 ETH</h2>
+                  <img id="img-eth" src="./images/coins.png" alt="" />
+                </div>
+                <div class="detail-price">
+                  <h1 id="ethereum">$7.463</h1>
+                </div>
+              </div>
+              <div class="details-card">
+                <div class="profit-card">
+                  <p>Profit last hour</p>
+                  <p>$230,78</p>
+                </div>
+                <div class="porcentage-detail" id="porcentage-detail-eth">
+                  <i class="fa-solid fa-arrow-up" style="color: #0400ff"></i>
+                  <p>-2.5%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card3 -->
+          <div class="card-fr card-xrp">
+            <div class="content-card">
+              <div class="title-card">
+                <h3>XRP</h3>
+                <p>USD</p>
+              </div>
+              <div class="price-card">
+                <div class="img-card">
+                  <h2>1 XRP</h2>
+                  <img id="img-xrp" src="./images/xrp.png" alt="" />
+                </div>
+                <div class="detail-price">
+                  <h1 id="xrp">$0,501942</h1>
+                </div>
+              </div>
+              <div class="details-card">
+                <div class="profit-card">
+                  <p>Profit last hour</p>
+                  <p>$10,78</p>
+                </div>
+                <div class="porcentage-detail" id="porcentage-detail-xrp">
+                  <i class="fa-solid fa-arrow-up" style="color: #0400ff"></i>
+                  <p>51.5%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Card4 -->
+          <div class="card-fr card-ada">
+            <div class="content-card">
+              <div class="title-card">
+                <h3>Cardano</h3>
+                <p>USD</p>
+              </div>
+              <div class="price-card">
+                <div class="img-card">
+                  <h2>1 ADA</h2>
+                  <img id="img-ada" src="./images/cardano.png" alt="" />
+                </div>
+                <div class="detail-price">
+                  <h1 id="ada">$0</h1>
+                </div>
+              </div>
+              <div class="details-card">
+                <div class="profit-card">
+                  <p>Profit last hour</p>
+                  <p>$230,78</p>
+                </div>
+                <div class="porcentage-detail" id="porcentage-detail-ada">
+                  <i class="fa-solid fa-arrow-up" style="color: #0400ff"></i>
+                  <p>-43.7%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <!-- Card 5 -->
+          <div class="card-fr card-xmr">
+            <div class="content-card">
+              <div class="title-card">
+                <h3>Monero</h3>
+                <p>USD</p>
+              </div>
+              <div class="price-card">
+                <div class="img-card">
+                  <h2>1 XMR</h2>
+                  <img id="img-xmr" src="./images/monero.png" alt="" />
+                </div>
+                <div class="detail-price">
+                  <h1 id="xmr">$0</h1>
+                </div>
+              </div>
+              <div class="details-card">
+                <div class="profit-card">
+                  <p>Profit last hour</p>
+                  <p>$230,78</p>
+                </div>
+                <div class="porcentage-detail" id="porcentage-detail-xmr">
+                  <i class="fa-solid fa-arrow-up" style="color: #0400ff"></i>
+                  <p>-4.7%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row sr-general-container">
+          <div class="graphic-sr">
+            <div class="column-button column-button-previous">
+              <button id="prevBtn">
+                <i class="fa-solid fa-caret-left" style="color: #fff"></i>
+              </button>
+            </div>
+            <div class="slider-news">
+              <ul class="slider" id="slider"></ul>
+            </div>
+            <div class="column-button column-button-next">
+              <button id="nextBtn">
+                <i class="fa-solid fa-caret-right" style="color: #fff"></i>
+              </button>
+            </div>
+          </div>
+          <div class="transaccions-sr">
+            <div class="content-transaccions">
+              <div class="transactions" id="transaccions">
+                <div class="row-transaction">
+                  <p class="title-rows" id="detail-transaction">Cripto</p>
+                  <p class="title-rows" id="detail-transaction">Id Number</p>
+                  <p class="title-rows" id="detail-transaction">Price</p>
+                  <p class="title-rows" id="detail-transaction">Date</p>
+                  <p class="title-rows" id="detail-transaction">Quantity</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script src="actprices.js"></script>
+    <script src="index2.js"></script>
+    <script src="trades.js"></script>
+    <script src="apinews.js"></script>
+    <script src="buy.js"></script>
+    <script src="activateExchange.js"></script>
+    <script src="calcExchange.js"></script>
+  </body>
+</html>
