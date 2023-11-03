@@ -1,4 +1,4 @@
-fetch("http://localhost:8080/getNews")
+fetch("https://proyectoflo02-dev-fnbz.3.us-1.fl0.io:8080/getNews")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((news) => {
