@@ -4,7 +4,7 @@ const precioXRP = document.getElementById("xrp");
 const precioADA = document.getElementById("ada");
 const precioXMR = document.getElementById("xmr");
 
-const socket = new WebSocket("ws://localhost:8080");
+const socket = new WebSocket("ws://https://proyectoflo02-dev-fnbz.3.us-1.fl0.io:8080");
 
 let precioActualBTC = 0;
 let precioActualETH = 0;
