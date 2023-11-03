@@ -1,5 +1,3 @@
-// index.js (Frontend JavaScript)
-
 document.addEventListener("DOMContentLoaded", () => {
   // Obtener una referencia al elemento donde deseas mostrar los datos
   const transaccionContainer = document.getElementById("transaccions");
