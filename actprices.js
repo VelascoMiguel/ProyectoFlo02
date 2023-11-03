@@ -4,7 +4,7 @@ const precioXRP = document.getElementById("xrp");
 const precioADA = document.getElementById("ada");
 const precioXMR = document.getElementById("xmr");
 
-const socket = new WebSocket("ws://localhost:4544");
+const socket = new WebSocket("ws://localhost:8080");
 
 let precioActualBTC = 0;
 let precioActualETH = 0;
