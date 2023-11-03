@@ -1,4 +1,4 @@
-fetch("http://localhost:4544/getNews")
+fetch("http://localhost:8080/getNews")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((news) => {
