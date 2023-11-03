@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const transaccionContainer = document.getElementById("transaccions");
 
   // Realizar una solicitud HTTP al servidor para obtener los datos de los trades
-  fetch("http://localhost:4544/getTrades")
+  fetch("http://localhost:8080/getTrades")
     .then((response) => response.json())
     .then((data) => {
       // Procesar los datos y mostrarlos en la página
